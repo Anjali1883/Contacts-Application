@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--2 column base layout-->
+    <main id="app-layout">
+        <section id="left-col">
+            <header>
+                <div class="left"></div>
+                <div class="title">Contacts</div>
+                <div class="right">
+                    <button class="add-btn">ADD</button>
+                </div>
+            </header>
+
+            <ul id="contact-list"> 
+                <!--<li class="contact-list-item">
+                    <div class="media">
+                        <div class="two-letters">AB</div>
+                    </div>
+                    <div class="content">
+                        <div class="title">Title</div>
+                        <div class="subtitle">Subtitle</div>
+                    </div>
+                    <div class="action">
+                        <button class="edit-user">Edit</button>
+                        <button class="delete-user">Delete</button>
+                    </div>
+                </li>-->
+            </ul>
+
+
+        </section>
+        <section id="right-col">
+            <header>
+                <div>
+                    <button id="back-btn">Back</button>
+                </div>
+                <div class="title"></div>
+            </header>
+
+            <div id="right-col-detail"></div>
+
+        </section>
+    </main>
+
+    <!--MODAL-->
+    <div id="modal-overlay">
+        <div id="modal">
+            <div class="modal-header">
+                <h2>Add Contacts</h2> 
+            </div>
+            <ul id="error-label"></ul>
+            <div class="modal-content">
+                <!--row 1-->
+                <div class="row">
+                    <!--first name-->
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName">
+                    </div>
+                    <!--second name-->
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text"id="lastName">
+                    </div>
+                </div> 
+
+                <!--row 2-->
+
+                <div class="row">
+                    <!--age-->
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="number"id="age">
+                    </div>
+                    <!--number-->
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="number"id="phone">
+                    </div>
+                </div>
+                <!--row 3-->
+                <div class="row">
+                    <!--email-->
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email"id="email">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn">Close</button>
+                <button class="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="firestore-sdk.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
